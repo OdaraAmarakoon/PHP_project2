@@ -2,17 +2,17 @@
 
 <?php  if(isset($_POST['submit'])){
 
-  $first_name =  $_POST['first_name'];
-  $last_name = $_POST['last_name'];
-  $user_email =  $_POST['user_email'];
-  $user_password = $_POST['user_password'];
+  $firstName =  $_POST['firstName'];
+  $lastName = $_POST['lastName'];
+  $userEmail =  $_POST['userEmail'];
+  $userPassword = $_POST['userPassword'];
   $image = $_FILES['image']['name'];
   $image_size = $_FILES['image']['size'];
   $image_tmp_name = $_FILES['image']['tmp_name'];
   $image_folder = '../Images/'.$image;
 
-  $select = mysqli_query($connection, "SELECT * FROM `user` WHERE user_email = '$user_email' AND
-   user_password = '$user_password'") or die('query failed');
+  // need to check only the email.
+  $select = mysqli_query($connection, "SELECT * FROM `user` WHERE userEmail = '$userEmail'") or die('query failed');
 
    if(mysqli_num_rows($select) > 0){
       $message[] = 'user already exist'; 
@@ -27,8 +27,8 @@
          move_uploaded_file($image_tmp_name, $image_folder);
 
          //insert query
-         $insert = mysqli_query($connection, "INSERT INTO `user`(first_name, last_name, user_email, user_password, image)
-          VALUES(' $first_name', '$last_name' ,'$user_email', '$user_password', '$image')");
+         $insert = mysqli_query($connection, "INSERT INTO `user`(firstName, lastName, userEmail, userPassword, image)
+          VALUES(' $firstName', '$lastName' ,'$userEmail', '$userPassword', '$image')");
 
         
          if($insert){
