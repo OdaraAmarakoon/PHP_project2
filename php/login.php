@@ -21,8 +21,8 @@ if ($resultSet->num_rows > 0) {
 
 	$_SESSION["currentUser"] = $userEmail;
 
-    //Immediate direction to the User Profile
-	header("Location: ../userProfile.html"); 	
+    //direct to the User Profile
+	header("Location: ./userProfile.php"); 	
 }
 else{
 
@@ -34,7 +34,7 @@ else{
 	 {
 	 	window.location.replace("../login.html");
 	 }else{
-	 	window.location.replace("../userProfile.html");
+	 	window.location.replace("/userProfile.php");
 	 } 
 
 	 </script>';

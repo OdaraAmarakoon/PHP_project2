@@ -1,11 +1,9 @@
 /* Made with love by Mutiullah Samim*/
 
-
-/* login page styles */
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('https://getwallpapers.com/collection/dark-blue-hd-wallpapers');
+
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -28,16 +26,16 @@ background-color: rgba(0,0,0,0.5) !important;
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
-color: #2222d0;
+color: #1224cc;
 }
 
 .social_icon span:hover{
-color: rgb(101, 103, 215);
+color: white;
 cursor: pointer;
 }
 
 .card-header h3{
-color: rgb(189, 128, 128);
+color: white;
 }
 
 .social_icon{
@@ -48,7 +46,7 @@ top: -45px;
 
 .input-group-prepend span{
 width: 50px;
-background-color: #40a86d;
+background-color: #9d10a4dc;
 color: black;
 border:0 !important;
 }
@@ -73,13 +71,13 @@ margin-right: 5px;
 
 .login_btn{
 color: black;
-background-color: #f01811;
+background-color: #9d10a4dc;
 width: 100px;
 }
 
 .login_btn:hover{
 color: black;
-background-color: rgb(180, 89, 89);
+background-color: white;
 }
 
 .links{
