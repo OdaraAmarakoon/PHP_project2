@@ -30,7 +30,7 @@
          $insert = mysqli_query($connection, "INSERT INTO `user`(firstName, lastName, userEmail, userPassword, image)
           VALUES(' $firstName', '$lastName' ,'$userEmail', '$userPassword', '$image')");
 
-        
+      //   check whether regitation is successfull or not
          if($insert){
             $message[] = 'registered successfully!';
             header("Location:../login.html");
